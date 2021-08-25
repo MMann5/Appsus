@@ -47,19 +47,19 @@ function _createNotes() {
       [
         {
           id: utilService.makeId(),
-          type: 'note-txt',
+          type: 'txt',
           isPinned: true,
           info: { txt: 'Fullstack Me Baby!' },
         },
         {
           id: utilService.makeId(),
-          type: 'note-img',
+          type: 'img',
           info: { url: 'http://some-img/me', title: 'Bobi and Me' },
           style: { backgroundColor: '#00d' },
         },
         {
           id: utilService.makeId(),
-          type: 'note-todos',
+          type: 'todos',
           info: {
             label: 'Get my stuff together',
             todos: [
