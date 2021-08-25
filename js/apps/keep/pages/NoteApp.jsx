@@ -1,19 +1,18 @@
 export class NoteApp extends React.Component {
-    state = {
-        note: [],
-        filterBy: null
-    }
+  state = {
+    note: [],
+    filterBy: null,
+  };
 
-    ComponentDidMount(){
-        console.log('this.props: ', this.props);
-    }
+  ComponentDidMount() {
+    console.log('this.props: ', this.props);
+  }
 
-    // loadNotes = () => {
+  // loadNotes = () => {
 
-    // }
+  // }
 
-
-    render(){
-        return <h2>coucou</h2>
-    }
+  render() {
+    return <h2>coucou</h2>;
+  }
 }
