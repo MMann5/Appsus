@@ -1,3 +1,10 @@
+import { storageService } from "../../../services/storage.service.js";
+import { utilService} from "../../../services/util.service.js"
+
+export const NotesService ={
+
+}
+
 const notes = [
   {
     id: 'n101',

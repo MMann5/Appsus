@@ -1,4 +1,4 @@
-import { App } from './RootCmp.jsx'
+import { App } from '../RootCmp.jsx'
 
 ReactDOM.render(
     <App />,
