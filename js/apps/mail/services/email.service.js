@@ -1,3 +1,4 @@
+import { utilService } from '../../../services/util.service.js';
 export const emailService = {
   query,
 };
@@ -8,6 +9,7 @@ var mockEmails = [
     subject: 'Miss you!',
     body: 'Would love to catch up sometimes',
     isRead: false,
+    isSent: false,
     sentAt: 1551133930594,
     to: 'momo@momo.com',
   },
@@ -16,6 +18,7 @@ var mockEmails = [
     subject: 'Miss you!',
     body: 'Would love to catch up sometimes',
     isRead: false,
+    isSent: false,
     sentAt: 1551133930594,
     to: 'momo@momo.com',
   },
@@ -24,6 +27,7 @@ var mockEmails = [
     subject: 'Miss you!',
     body: 'Would love to catch up sometimes',
     isRead: true,
+    isSent: false,
     sentAt: 1551133930594,
     to: 'momo@momo.com',
   },
