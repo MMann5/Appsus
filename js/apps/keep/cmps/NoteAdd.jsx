@@ -1,3 +1,4 @@
+import { NotePic } from "./NotePic.jsx";
 export class NoteAdd extends React.Component {
     state = {
         note: {
@@ -25,29 +26,24 @@ export class NoteAdd extends React.Component {
     };
 
     render() {
-        const { txt, backgroundColor, url } = this.state
+        const { txt, backgroundColor} = this.state
         return (
-            <form className='note-add' onSubmit={this.onSave}>
-                <label htmlFor='by-title'></label>
-                <input
-                    value={txt}
-                    className='filter'
-                    name='txt'
-                    type='text'
-                    placeholder='your mind'
-                    onChange={this.handleChange}
-                />
-                <label htmlFor="url">Enter a URL:</label>
-                <input value={url} type="url" name="url" onChange={this.handleChange} />
-                <input
-                    value={backgroundColor}
-                    className='filter'
-                    name='backgroundColor'
-                    type='color'
-                    onChange={this.handleChange}
-                />
-                <button>ADD</button>
-            </form>
+            <div>
+                <form className='note-add' onSubmit={this.onSave}>
+                    <label htmlFor='by-title'></label>
+                    <textarea value={txt}
+                        className='filter filter-txt'
+                        name='txt'
+                        type='text'
+                        placeholder='your mind'
+                        rows="15" cols="33"
+                        onChange={this.handleChange}></textarea>
+                    <input value={backgroundColor} className='filter' name='backgroundColor' type='color' onChange={this.handleChange} />
+                    <input type="checkbox"/>
+                    <NotePic url={this.state.note.url} backgroundColor={this.state.note.backgroundColor} onChange={this.handleChange} />
+                    <button>New</button>
+                </form>
+            </div>
         );
     }
 }

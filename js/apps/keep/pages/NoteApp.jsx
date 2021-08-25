@@ -18,37 +18,38 @@ export class NoteApp extends React.Component {
     }
 
     onDeleteNote = (noteId) => {
-        noteService.deleteNote(noteId).then(()=>{
+        noteService.deleteNote(noteId).then(() => {
             this.loadNotes()
         })
     }
     onAddNote = (note) => {
-        noteService.addNote(note).then(()=>{
+        noteService.addNote(note).then(() => {
             this.loadNotes()
         })
     }
 
-    onChangeColor = (ev,id) => {
-       const color = ev.target.value
-        noteService.changeColor(color,id).then(()=>{
+    onChangeColor = (ev, id) => {
+        const color = ev.target.value
+        noteService.changeColor(color, id).then(() => {
             this.loadNotes()
         })
     }
 
-    // onUpdateNote(note,id){
-    //     noteService.addNote(note).then(()=>{
-    //         this.loadNotes()
-    //     })
-    // }
+    onUpdateNote(){
+        // noteService.update(note).then(()=>{
+        //     this.loadNotes()
+        // })
+        console.log('coucou');
+    }
 
     render() {
         const { notes } = this.state;
         return (
             <section className="note-app">
                 <h1>list</h1>
-                <NoteList notes={notes} onDeleteNote = {this.onDeleteNote} onChangeColor={
-                    this.onChangeColor}/>
                 <NoteAdd onAddNote={this.onAddNote} />
+                <NoteList notes={notes} onDeleteNote={this.onDeleteNote} onChangeColor={this.onChangeColor} onUpdateNote={this.onUpdateNote} />
+
             </section>
         )
     }

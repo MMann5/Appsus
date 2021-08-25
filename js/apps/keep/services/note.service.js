@@ -36,7 +36,7 @@ var gNotes = [
         isPinned: false,
         info: {
             url: 'http://coding-academy.org/books-photos/10.jpg',
-            txt: 'Nek...'
+            txt: 'Good memories...'
         },
         style: {
             backgroundColor: "#fff"
