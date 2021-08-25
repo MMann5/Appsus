@@ -1,12 +1,15 @@
-import { storageService } from '../../../services/storage.service.js'
+import {storageService} from '../../../services/storage.service.js'
 import { utilService } from '../../../services/util.service.js'
 
 export const noteService = {
     query,
     deleteNote,
     changeColor,
-    addNote
+    addNote,
+    updateNote
 }
+
+const key = 'NOTESDB'
 
 var gNotes = [
     {
@@ -73,4 +76,14 @@ function changeColor(color,noteId){
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
     gNotes[noteIdx].style.backgroundColor = color
     return Promise.resolve()
+}
+
+function updateNote(txt,noteId){
+    var noteIdx = gNotes.findIndex(note => noteId === note.id)
+    gNotes[noteIdx].info.txt = txt
+    return Promise.resolve()
+}
+
+function _saveToStorage(){
+    storageService.saveToStorage(key, gNotes)
 }

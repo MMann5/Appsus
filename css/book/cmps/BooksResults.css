@@ -2,24 +2,22 @@
   border: solid black 10px;
   display: flex;
   flex-direction: column;
-  /* width: 250px; */
-}
-img.result-img {
-  display: relative;
-  width: 50px;
-  border-radius: 60%;
+
 }
 
 .results {
+  /* border-radius: 50px; */
   display: flex;
   flex-direction: row;
-  height: 100px;
+  height: 50px;
   justify-content: space-between;
   width: 30%;
   margin: auto;
-  background-color: red;
+  background-color: rgb(209, 174, 174);
   list-style-type: none;
-  margin-top: 10px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-inline-start: 1%;
 }
 
 .results h3 {
@@ -28,8 +26,28 @@ img.result-img {
 }
 
 .btn-add-book {
-  width: 50px;
+  /* border-radius: 20px; */
   height: auto;
-  background-color: green;
+  /* background-color: rgb(150, 179, 150); */
   cursor: pointer;
+  width: 45px;
+}
+
+.add-icon{
+  width: 60px;
+}
+.btn-add-book:hover{
+  
+}
+
+.add-book {
+  margin-bottom: 1%;
+  width: auto;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.book-app {
+  margin-top: 1%;
+  text-align: center;
 }

@@ -37,9 +37,8 @@ export class AddBook extends React.Component {
   render() {
     return (
       <form>
-        Add Book
-        <input
-          placeholder='Search for...'
+        <input className='add-book'
+          placeholder='Add a new book...'
           ref={(input) => (this.search = input)}
           onChange={this.handleInputChange}
         />

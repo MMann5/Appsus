@@ -39,7 +39,6 @@ export class BookApp extends React.Component {
     if (!books) return <div>Loading...</div>;
     return (
       <section className='book-app'>
-        <h2>Miss Book</h2>
         <AddBook onAddBook={this.onAddBook} />
         <BookFilter onSetFilter={this.onSetFilter} />
         <BookList
