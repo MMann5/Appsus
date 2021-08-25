@@ -3,14 +3,14 @@ import { utilService } from "../../../services/util.service.js"
 export const notesService = {
   query,
   deleteNote,
-  addNote,
   getNoteById,
 }
 
 const KEY = 'notesDB'
+var gNotes;
 
-const gNotes =
-  [
+function note() {
+  var notes = [
     {
       id: utilService.makeId(),
       type: 'txt',
@@ -26,67 +26,17 @@ const gNotes =
       style: { backgroundColor: '#ff0' },
     },
   ]
+  return notes
+}
 
-// _createNotes()
 
-
-function query(filterBy) {
-  if (filterBy) {
-    const { type, isPinned } = filterBy
-    const notesDisplay = gNotes.filter(note => {
-      return note.type.includes(type) && isPinned ? note.isPinned : note
-    })
-    return Promise.resolve(notesDisplay)
-  }
-  return Promise.resolve(gNotes)
+function query() {
+  return Promise.resolve(note())
 }
 
 function _saveNotesToStorage() {
   storageService.save(KEY, gNotes)
 }
-
-// function getNotes() {
-//   return Promise.resolve(gNotes)
-// }
-
-function createNote(type, url = null, title = 'new-note') {
-  if (!type) type = 'txt'
-  return {
-    id: utilService.makeId(),
-    type,
-    info: {
-      url,
-      title
-    },
-    isPinned: false,
-    style: { backgroundColor: '#fff' },
-  }
-}
-
-// function _createNotes() {
-//   let notes = storageService.loadFromStorage(KEY)
-//   if (!notes || !notes.length) {
-//     notes =
-//       [
-//         {
-//           id: utilService.makeId(),
-//           type: 'txt',
-//           isPinned: true,
-//           info: { txt: 'Fullstack Me Baby!' },
-//           style: { backgroundColor: '#fff' },
-//         },
-//         {
-//           id: utilService.makeId(),
-//           type: 'img',
-//           isPinned: false,
-//           info: { url: 'https://picsum.photos', title: 'Bobi and Me' },
-//           style: { backgroundColor: '#ff0' },
-//         },
-//       ];
-//   }
-//   gNotes = notes;
-//   _saveNotesToStorage();
-// }
 
 function getNoteById(noteId) {
   let note = gNotes.find(function (note) {
