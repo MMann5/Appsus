@@ -1,0 +1,160 @@
+@import '../css/pages/setup.css';
+@import '../css/pages/BookDetails.css';
+@import '../css/pages/BookApp.css';
+
+@import 'cmps/AddBook.css';
+@import 'cmps/BooksResults.css';
+@import 'cmps/AppHeader.css';
+@import 'cmps/BookFilter.css';
+@import 'cmps/BookList.css';
+@import 'cmps/BookPreview.css';
+@import 'cmps/ReviewAdd.css';
+@import 'cmps/ReviewDisplay.css';
+@import 'cmps/UserMsg.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.125rem;
+  background-color: rgba(0, 0, 0, 0.699);
+  margin: 0;
+}
+
+.book-preview {
+  background-color: lightgray;
+  width: 270px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.book-preview img {
+  width: 120px;
+}
+
+.book-list {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-inline-end: 10%;
+  margin-inline-start: 10%;
+}
+
+.book-app {
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+img.sold {
+  width: 50px;
+}
+
+.book-details {
+  text-align: center;
+}
+
+.back {
+  width: 150px;
+  height: 50px;
+  background-color: orangered;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.back:hover {
+  background-color: black;
+  color: orangered;
+}
+
+h2 {
+  text-align: center;
+}
+
+.filter {
+  width: auto;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.filter-btn {
+  width: 150px;
+  height: 30px;
+  background-color: orangered;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: black;
+  color: orangered;
+}
+
+.title-book {
+  text-transform: capitalize;
+}
+
+.more {
+  color: orangered;
+  cursor: pointer;
+  /* border: solid 1px black; */
+}
+
+.book-filter {
+  margin: auto;
+}
+
+article.book-preview:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+a {
+  color: inherit;
+}
+
+.active {
+  color: red;
+}
+
+.my-active {
+  color: rgb(138, 68, 138);
+}
+
+.app-header {
+  height: 80px;
+  background-color: rgb(188, 230, 247);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.app-header :first-child {
+  padding-left: 30px;
+}
+.app-header nav {
+  padding-right: 30px;
+}
+
+.app-header nav > *:not(:last-child) {
+  padding-right: 20px;
+}

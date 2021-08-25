@@ -1,0 +1,35 @@
+.result-all {
+  border: solid black 10px;
+  display: flex;
+  flex-direction: column;
+  /* width: 250px; */
+}
+img.result-img {
+  display: relative;
+  width: 50px;
+  border-radius: 60%;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-between;
+  width: 30%;
+  margin: auto;
+  background-color: red;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.results h3 {
+  display: block;
+  padding: 0;
+}
+
+.btn-add-book {
+  width: 50px;
+  height: auto;
+  background-color: green;
+  cursor: pointer;
+}
