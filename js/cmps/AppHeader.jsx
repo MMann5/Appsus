@@ -5,16 +5,13 @@ class _AppHeader extends React.Component {
     return (
       <section className='app-header'>
         <h1 onClick={() => this.props.history.goBack()}>
-          Book Shop
+          APPSUS
         </h1>
-        <nav>
-          <NavLink activeClassName='my-active' exact to='/'>
-            Home
-          </NavLink>
-          <NavLink to='/book'>Our Books</NavLink>
-          <NavLink to='/notes'>Our Notes</NavLink>
-          <NavLink to='/mail'>Our Mail</NavLink>
-          <NavLink to='/'>Home</NavLink>
+        <nav className="header-container flex space-between align-center ">
+          <NavLink className="nav-bar"exact to="/">Home</NavLink>
+          <NavLink className="nav-bar" to='/book'>Books</NavLink>
+          <NavLink className="nav-bar" to='/notes'>Notes</NavLink>
+          <NavLink className="nav-bar" to='/mail'>Mail</NavLink>
         </nav>
       </section>
     );

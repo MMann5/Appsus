@@ -1,0 +1,23 @@
+.more {
+    color: orangered;
+    cursor: pointer;
+    /* border: solid 1px black; */
+  }
+
+  .book-details {
+    text-align: center;
+  }
+  
+  .back {
+    width: 150px;
+    height: 50px;
+    background-color: orangered;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .back:hover {
+    background-color: black;
+    color: orangered;
+  }

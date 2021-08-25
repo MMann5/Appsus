@@ -18,17 +18,6 @@ export function BookPreview({ book, onSelectBook, books }) {
           book.listPrice.amount
         }`}
       </div>
-      <div>
-        {book.listPrice.isOnSale ? (
-          <img
-            className='sold'
-            src='./assets/img/sale.PNG'
-            alt=''
-          ></img>
-        ) : (
-          ''
-        )}{' '}
-      </div>
       <Link to={`/book/${book.id}`}>Details</Link>
     </article>
   );

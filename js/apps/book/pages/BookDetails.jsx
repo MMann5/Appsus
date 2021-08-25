@@ -93,13 +93,13 @@ export class BookDetails extends React.Component {
             : ''}
         </p>
         <section className='actions'>
-          <button onClick={this.onBack}>Go Back</button>
+          <button className="back"onClick={this.onBack}>Go Back</button>
         </section>
-        <Link to={`/book/${bookService.getPrevBookId(book.id)}`}>
+        <Link className="prev-next" to={`/book/${bookService.getPrevBookId(book.id)}`}>
           Prev
         </Link>
-        <button onClick={this.onDeleteBook}>Delete</button>
-        <Link to={`/book/${bookService.getNextBookId(book.id)}`}>
+        <button className="back" onClick={this.onDeleteBook}>Delete</button>
+        <Link className="prev-next" to={`/book/${bookService.getNextBookId(book.id)}`}>
           Next
         </Link>
         <ReviewAdd book={book} onAddReview={this.onAddReview} />

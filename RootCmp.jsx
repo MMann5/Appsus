@@ -11,10 +11,10 @@ const { Route, Switch } = ReactRouterDOM;
 export function App() {
   return (
     <Router>
-      <header>
+      <header className="main-header">
         <AppHeader />
       </header>
-      <main>
+      <main className="main-content main-layout">
         <Switch>
           <Route path='/book/:bookId' component={BookDetails} />
           <Route path='/book' component={BookApp} />
@@ -23,7 +23,7 @@ export function App() {
           <Route path='/' component={Home} />
         </Switch>
       </main>
-      <footer>
+      <footer className="main-footer flex column">
         <AppFooter />
       </footer>
       <UserMsg />
