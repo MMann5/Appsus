@@ -53,6 +53,7 @@ function query() {
 function deleteNote(noteId) {
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
     gNotes.splice(noteIdx, 1)
+    _saveToStorage
     return Promise.resolve()
 }
 
@@ -69,18 +70,21 @@ function addNote({txt,backgroundColor,url}) {
         }
     }
     gNotes.push(note)
+    _saveToStorage
     return Promise.resolve()
 }
 
 function changeColor(color,noteId){
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
     gNotes[noteIdx].style.backgroundColor = color
+    _saveToStorage
     return Promise.resolve()
 }
 
 function updateNote(txt,noteId){
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
     gNotes[noteIdx].info.txt = txt
+    _saveToStorage
     return Promise.resolve()
 }
 
