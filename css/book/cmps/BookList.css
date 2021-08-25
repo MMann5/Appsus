@@ -1,12 +1,11 @@
 .book-list {
-  background-color: rgb(24, 22, 22);
+  /* background-color: rgb(24, 22, 22); */
     margin-top: 5%;
     text-align: center;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-inline-end: 10%;
-    margin-inline-start: 10%;
+    justify-content: center;
   }
 
   .book-preview {
