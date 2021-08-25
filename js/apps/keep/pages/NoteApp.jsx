@@ -6,26 +6,26 @@ export class NoteApp extends React.Component {
   }
 
   ComponentDidMount() {
-    console.log('HELLLLL');
-    // this.loadNotes()
+    this.loadNotes()
   }
 
   loadNotes = () => {
-    console.log(notesService.query());
-  }
+    console.log('couco');}
+  //   notesService.query().then((notes)=>this.setState({notes}))
+  // }
 
-  onRemoveNote = (noteId) => {
-    notesService.deleteNote(noteId).then(() => {
-      this.loadNotes()
-    })
-  }
+  // onRemoveNote = (noteId) => {
+  //   notesService.deleteNote(noteId).then(() => {
+  //     this.loadNotes()
+  //   })
+  // }
 
   render() {
     const { notes } = this.state;
     return (
       <section>
         <div className="header">Notes</div>
-        <NoteList notes={notes} onRemoveNote={this.onRemoveNote} />
+        <NoteList notes={notes}/>
       </section>
     );
   }

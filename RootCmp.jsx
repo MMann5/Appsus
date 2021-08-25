@@ -4,7 +4,7 @@ import { NoteApp } from './js/apps/keep/pages/NoteApp.jsx';
 import { MailApp } from './js/apps/mail/pages/MailApp.jsx';
 import { Home } from './js/pages/Home.jsx';
 import { AppHeader } from './js/cmps/AppHeader.jsx';
-import { AppFooter } from './js/cmps/AppFooter.jsx';
+// import { AppFooter } from './js/cmps/AppFooter.jsx';
 import { UserMsg } from './js/cmps/UserMsg.jsx';
 const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;
