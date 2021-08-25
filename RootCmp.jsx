@@ -23,9 +23,9 @@ export function App() {
           <Route path='/' component={Home} />
         </Switch>
       </main>
-      <footer className="main-footer flex column">
+      {/* <footer className="main-footer flex column">
         <AppFooter />
-      </footer>
+      </footer> */}
       <UserMsg />
     </Router>
   );

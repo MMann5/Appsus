@@ -1,11 +1,12 @@
 import { storageService } from "../../../services/storage.service.js";
-import { utilService} from "../../../services/util.service.js"
-
-export const NotesService ={
+import { utilService } from "../../../services/util.service.js"
+export const NotesService = {
 
 }
 
-const notes = [
+const KEY = 'notesDB'
+
+const gNotes = [
   {
     id: 'n101',
     type: 'note-txt',
@@ -30,3 +31,45 @@ const notes = [
     },
   },
 ];
+
+function _saveNotesToStorage() {
+  storageService.save(KEY, gNotes)
+}
+
+function getNotes() {
+  return Promise.resolve(gNotes)
+}
+
+function _createNotes() {
+  var notes = storageService.loadFromStorage(KEY)
+  if (!notes || !notes.length) {
+    notes =
+      [
+        {
+          id: utilService.makeId(),
+          type: 'note-txt',
+          isPinned: true,
+          info: { txt: 'Fullstack Me Baby!' },
+        },
+        {
+          id: utilService.makeId(),
+          type: 'note-img',
+          info: { url: 'http://some-img/me', title: 'Bobi and Me' },
+          style: { backgroundColor: '#00d' },
+        },
+        {
+          id: utilService.makeId(),
+          type: 'note-todos',
+          info: {
+            label: 'Get my stuff together',
+            todos: [
+              { txt: 'Driving liscence', doneAt: null },
+              { txt: 'Coding power', doneAt: 187111111 },
+            ],
+          },
+        },
+      ];
+  }
+  gNotes = notes;
+  _saveNotesToStorage();
+}
