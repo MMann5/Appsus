@@ -1,0 +1,15 @@
+.img-preview{
+    width: 200px;
+}
+
+.note-preview{
+    display: inline-block;
+    border: solid black 1px;
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+}
+
+h4.note.txt{
+    margin: 0;
+}
