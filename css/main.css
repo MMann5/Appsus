@@ -13,6 +13,9 @@
 @import 'book/cmps/ReviewDisplay.css';
 @import 'book/cmps/UserMsg.css';
 
+
+@import 'keep/cmps/NotePreview.css';
+
 @import 'parts/helpers.css';
 @import 'parts/fonts.css';
 @import 'parts/base.css';
