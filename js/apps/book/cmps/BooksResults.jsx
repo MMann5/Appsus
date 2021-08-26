@@ -3,7 +3,7 @@ export function BooksResults({ res, onAddBook, resetQuery }) {
     <div className='results-all'>
       {res.map((r) => (
         <div className='results' key={r.id}>
-          <h3>{r.volumeInfo.title.substring(0, 25)}</h3>
+          <p className='results-list'>{r.volumeInfo.title.substring(0, 25)}</p>
           <button
             className='btn-add-book'
             onClick={(e) => {
@@ -11,7 +11,7 @@ export function BooksResults({ res, onAddBook, resetQuery }) {
               resetQuery();
             }}
           >
-            ADD
+            <img className='add-icon'src="../js/apps/book/assets/img/add.png" alt="" />
           </button>
         </div>
       ))}

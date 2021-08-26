@@ -35,11 +35,11 @@ export class NoteApp extends React.Component {
         })
     }
 
-    onUpdateNote(){
-        // noteService.update(note).then(()=>{
-        //     this.loadNotes()
-        // })
-        console.log('coucou');
+    onUpdateNote(ev,id){
+        const color = ev.target.value
+        noteService.updateNote(color, id).then(() => {
+            this.loadNotes()
+        })
     }
 
     render() {
