@@ -15,7 +15,7 @@ export function EmailPage({
       {!isSentEmail ? (
         <div>
           <button onClick={onToggleCompose}>
-            Compose Or Something I dont care
+            Compose
           </button>
           <button onClick={onToggleSentEmails}>sentMail</button>
         </div>

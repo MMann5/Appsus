@@ -36,6 +36,33 @@ var mockEmails = [
     sentAt: 1551133930594,
     to: 'momo@momo.com',
   },
+  {
+    id: 'e104',
+    subject: 'Miss jew!',
+    body: 'Would love to catch up sometimes',
+    isRead: false,
+    isSent: false,
+    sentAt: 1551133930594,
+    to: 'momo@momo.com',
+  },
+  {
+    id: 'e105',
+    subject: 'Miss you!',
+    body: 'Would love to catch up sometimes',
+    isRead: false,
+    isSent: false,
+    sentAt: 1551133930594,
+    to: 'momo@momo.com',
+  },
+  {
+    id: 'e106',
+    subject: 'Miss lad!',
+    body: 'Would love to catch up sometimes',
+    isRead: true,
+    isSent: false,
+    sentAt: 1551133930594,
+    to: 'momo@momo.com',
+  },
 ];
 var mockSentEmails = [
   {

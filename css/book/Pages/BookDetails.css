@@ -1,23 +1,53 @@
 .more {
-    color: orangered;
-    cursor: pointer;
-    /* border: solid 1px black; */
-  }
+  color: orangered;
+  cursor: pointer;
+  /* border: solid 1px black; */
+}
 
-  .book-details {
-    text-align: center;
-  }
-  
-  .back {
-    width: 150px;
-    height: 50px;
-    background-color: orangered;
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-  }
-  
-  .back:hover {
-    background-color: black;
-    color: orangered;
-  }
+.book-details {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.back {
+  width: 150px;
+  height: 20px;
+  background-color: orangered;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.back:hover {
+  background-color: black;
+  color: orangered;
+}
+
+form.book-edit {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.btn-review {
+  background-color: orangered;
+  border-radius: 15px;
+  margin: auto;
+  width: 30%;
+}
+
+.prev-next {
+  border-radius: 10px;
+  cursor: pointer;
+  margin-inline-end: 1rem;
+  margin-inline-start: 1rem;
+  box-shadow: 3px 3px 3px 3px;
+  padding: 5px;
+}
+
+.prev-next:hover {
+  font-weight: bold;
+  background-color: orangered;
+}

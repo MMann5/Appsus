@@ -15,7 +15,7 @@ export function App() {
       <header className='main-header'>
         <AppHeader />
       </header>
-      <main className='main-content main-layout'>
+      <main >
         <Switch>
           <Route path='/book/:bookId' component={BookDetails} />
           <Route path='/book' component={BookApp} />

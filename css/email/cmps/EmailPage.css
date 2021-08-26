@@ -1,8 +1,3 @@
-.emails {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
 .email-showcase {
   display: flex;
   justify-content: space-between;
@@ -21,7 +16,8 @@
   padding-top: 5%;
   box-shadow: 20px 9px 29px 7px #999999;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,4 +35,42 @@
   font-size: large;
   padding: 5px;
   width: 150px;
+}
+
+
+.email-showcase{
+  margin: auto;
+
+  width: 80%;
+  /* height: 50vh; */
+}
+
+.table-mail{
+  margin-top: 1%;
+  border: solid black 1px;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+}
+
+.obj{
+  width: 20%;
+  font-weight: bolder;
+}
+.body{
+  width: 60%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.star{
+  text-align: end;
+}
+
+/* div.emails{
+  width: 1000px;
+} */
+
+.email-window{
+  width: 100%;
 }
