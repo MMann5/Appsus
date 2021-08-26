@@ -3,9 +3,12 @@
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.125rem;
     margin: 0;
     position: relative;
+    background: linear-gradient(to right, #83a4d4, #b6fbff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 a {
@@ -14,12 +17,11 @@ a {
 }
 
 .active {
-    color: orangered;
+    color: white;
 }
 
 h1,
 h2 {
-    color: #cc1c1c;
     font-family: lato-bold, sans-serif;
     margin: 0 0;
     line-height: 1.875rem;
@@ -29,9 +31,73 @@ h2 {
     font-size: 1.75rem;
 }
 
-.app-home{
+.app-home {
     height: 100vh;
-    background-image: url(/img/3810369.jpg);
+    background-image: url(/img/pexels-a-tiny-&-big-man-737586.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
+}
+
+.btn {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: solid 1px #008CBA;
+    border-radius: 5px;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #008CBA;
+
+}
+
+.btn-result {
+    line-height: 10px;
+    margin: 0;
+    font-size: larger;
+}
+
+input[type=text],
+input[type=number] {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #444;
+    font-size: 16px;
+    padding: 12px 15px;
+    /* width: 100%; */
+    border-radius: 3px;
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    width: auto;
+    margin: 0;
+    color: black;
+}
+.btn-delete:hover{
+    background-color: transparent;
+    width: auto;
+    margin: 0;
+    color: white;
+}
+
+.note-btn{
+    align-items: center;
 }

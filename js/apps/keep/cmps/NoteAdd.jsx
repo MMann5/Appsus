@@ -46,7 +46,7 @@ export class NoteAdd extends React.Component {
                     <div className="note-options">
                         <label htmlFor="color-pal"><img className="color-pal"src="https://img.icons8.com/ios/50/000000/fill-color.png"/></label>
                         <input value={backgroundColor} id="color-pal" className='note-color' name='backgroundColor' type='color' onChange={this.handleChange} hidden />
-                        <button className="new-note-btn">New</button>
+                        <button className="btn">New</button>
                         <label htmlFor="img-url"><img className="img-icon" src="https://img.icons8.com/ios/50/000000/image.png" /></label>
                         <input type="checkbox" onChange={this.onCheck} id="img-url" hidden />
                         {isChecked && <div>

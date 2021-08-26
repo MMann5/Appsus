@@ -38,39 +38,45 @@
 }
 
 
-.email-showcase{
+.email-showcase {
   margin: auto;
-
   width: 80%;
   /* height: 50vh; */
 }
 
-.table-mail{
-  margin-top: 1%;
+.table-mail {
+  /* margin-top: 1%; */
   border: solid black 1px;
   width: 100%;
-  height: 100%;
-  padding: 2%;
+line-height: 100px;
+  /* padding: 2%; */
 }
 
-.obj{
-  width: 20%;
+
+.obj {
+  width: 10%;
   font-weight: bolder;
 }
-.body{
+
+.body {
   width: 60%;
   text-align: center;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
 }
 
-.star{
+.star {
   text-align: end;
 }
 
-/* div.emails{
-  width: 1000px;
-} */
+.mail-btn {
+  margin: auto;
+  text-align: center;
+}
 
-.email-window{
-  width: 100%;
+.mail-searchbox{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  margin-top: 2%;
 }

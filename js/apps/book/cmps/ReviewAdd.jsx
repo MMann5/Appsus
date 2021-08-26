@@ -64,7 +64,7 @@ export class ReviewAdd extends React.Component {
             rows='5'
             placeholder='comment this book'
           ></textarea>
-          <button className="btn-review">Save Review</button>
+          <button className="btn">Save Review</button>
         </form>
       </section>
     );

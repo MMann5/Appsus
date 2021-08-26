@@ -5,7 +5,7 @@ export function BooksResults({ res, onAddBook, resetQuery }) {
         <div className='results' key={r.id}>
           <p className='results-list'>{r.volumeInfo.title.substring(0, 25)}</p>
           <button
-            className='btn-add-book'
+            className='btn btn-result'
             onClick={(e) => {
               onAddBook(e, r);
               resetQuery();

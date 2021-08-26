@@ -1,29 +1,34 @@
 .app-header {
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.753);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .app-header :first-child {
-    padding-left: 30px;
-  }
-  .app-header nav {
-    padding-right: 30px;
-  }
-  
-  .app-header nav > *:not(:last-child) {
-    padding-right: 20px;
-  }
-
-  .nav-header{
-    display: flex;
-  }
-
-.main-header .header-container {
-  color: white;
+  height: 100px;
+  background: #F2BE24;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a.nav-bar{
+.app-header nav>*:not(:last-child) {
+  padding-right: 30px;
+}
+
+.nav-header {
+  display: flex;
+}
+
+.main-header .header-container {
+  color: rgb(39, 145, 180);
+}
+
+a.nav-bar {
   font-size: 1.5rem;
+}
+
+a.nav-bar:last-child {
+  padding-inline-end: 50px;
+}
+
+.app-header h1 {
+  padding-inline-start: 50px;
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  color:#50a5eb;
 }

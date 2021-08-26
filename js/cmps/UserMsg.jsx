@@ -30,7 +30,7 @@ export class UserMsg extends React.Component {
     return (
       <section className={`user-msg ${msg.type || ''}`}>
         <h1>{msg.txt}</h1>
-        <button onClick={this.onCloseMsg}>X</button>
+        <button className="btn"onClick={this.onCloseMsg}>X</button>
       </section>
     );
   }

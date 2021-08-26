@@ -10,7 +10,7 @@
 .note-add {
   border-radius: 10px;
   margin: auto;
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   margin-bottom: 1%;
@@ -34,6 +34,8 @@
 }
 
 .note-options {
+  align-items: center;
+  justify-content: space-around;
   margin: 0;
   display: flex;
 }

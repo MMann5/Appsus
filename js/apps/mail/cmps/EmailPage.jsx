@@ -18,15 +18,15 @@ export function EmailPage({
         isSentEmail={isSentEmail}
       />
       {!isSentEmail ? (
-        <div>
-          <button onClick={onToggleCompose}>
+        <div className="mail-btn">
+          <button className="btn" onClick={onToggleCompose}>
             Compose
           </button>
-          <button onClick={onToggleSentEmails}>sentMail</button>
+          <button className="btn" onClick={onToggleSentEmails}>Sent</button>
         </div>
       ) : (
-        <div>
-          <button onClick={getBack}>Go back to inbox</button>
+        <div className="mail-btn">
+          <button className="btn" onClick={getBack}>Go back to inbox</button>
         </div>
       )}
       <div className='emails'>

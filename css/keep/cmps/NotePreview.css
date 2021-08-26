@@ -24,6 +24,12 @@
     /* height: 500px; */
     margin: 5px;
     padding: 10px;
+    /* cursor: pointer; */
+}
+
+div.note-preview:hover{
+    transition: 0.5s;
+    background-color: white!important;
 }
 
 h4.note.txt {

@@ -52,6 +52,17 @@ var gNotes = [
     id: utilService.makeId(),
     isPinned: false,
     info: {
+      txt: 'SPRIIIIIIINT !',
+      url: null,
+    },
+    style: {
+      backgroundColor: '#3DCD83',
+    },
+  },
+  {
+    id: utilService.makeId(),
+    isPinned: false,
+    info: {
       url:
         'https://i.picsum.photos/id/1025/4951/3301.jpg?hmac=_aGh5AtoOChip_iaMo8ZvvytfEojcgqbCH7dzaz-H8Y',
       txt: 'Funny Dog',

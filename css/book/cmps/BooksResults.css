@@ -6,18 +6,17 @@
 }
 
 .results {
-  /* border-radius: 50px; */
   display: flex;
   flex-direction: row;
   height: 50px;
   justify-content: space-between;
   width: 30%;
   margin: auto;
-  background-color: rgb(209, 174, 174);
   list-style-type: none;
   margin-top: 1%;
   margin-bottom: 1%;
   padding-inline-start: 1%;
+  padding: 5px;
 }
 
 .results h3 {
@@ -25,26 +24,9 @@
   padding: 0;
 }
 
-.btn-add-book {
-  /* border-radius: 20px; */
-  height: auto;
-  /* background-color: rgb(150, 179, 150); */
-  cursor: pointer;
-  width: 45px;
-}
-
-.add-icon{
-  width: 60px;
-}
-.btn-add-book:hover{
-  
-}
-
 .add-book {
   margin-bottom: 1%;
   width: auto;
-  height: 30px;
-  border-radius: 15px;
 }
 
 .book-app {

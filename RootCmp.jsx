@@ -27,7 +27,6 @@ export function App() {
       <footer className="main-footer">
         <AppFooter />
       </footer>
-      <UserMsg />
     </Router>
   );
 }

@@ -60,7 +60,7 @@ export class EmailCompose extends React.Component {
             cols='60'
             onChange={this.handleChange}
           ></textarea>
-          <button className='send-btn'>SEND</button>
+          <button className="btn">SEND</button>
         </form>
       </div>
     );

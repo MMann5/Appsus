@@ -29,13 +29,13 @@ export class EmailFilter extends React.Component {
     const { searchQuery, type } = this.state;
     return (
       <div className='compose-mail'>
-        <form className='email-add' onSubmit={this.onSave}>
+        <form className='mail-searchbox' onSubmit={this.onSave}>
           <label htmlFor='by-subject'></label>
           <input
             value={searchQuery}
-            className='search search-txt'
+            className='search search-txt add-book'
             name='searchQuery'
-            type='txt'
+            type='text'
             placeholder='Search...'
             onChange={this.handleChange}
           ></input>
@@ -50,7 +50,7 @@ export class EmailFilter extends React.Component {
               <option value='unread'>Unread</option>
             </select>
           )}
-          <button>Search</button>
+          <button className="btn">Search</button>
         </form>
       </div>
     );

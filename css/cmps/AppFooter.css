@@ -1,10 +1,10 @@
 .app-footer {
     height: 100px;
-    background-color: rgba(0, 0, 0, 0.753);
+    background: linear-gradient(to right, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgb(39, 145, 180);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1%;
 }
 
 .app-footer h3{

@@ -3,34 +3,29 @@
 @import 'book/cmps/BooksResults.css';
 @import 'book/cmps/BookFilter.css';
 @import 'book/cmps/BookList.css';
-@import 'book/cmps/ReviewAdd.css';
-@import 'book/cmps/ReviewDisplay.css';
 @import 'book/cmps/UserMsg.css';
 
 @import 'keep/cmps/NotePreview.css';
 @import 'keep/cmps/NoteAdd.css';
 @import 'email/cmps/EmailPage.css';
 
-@import 'parts/helpers.css';
-@import 'parts/fonts.css';
-@import 'parts/base.css';
 
-@import 'cmps/app-home.css';
 @import 'cmps/app-header.css';
 @import 'cmps/user-msg.css';
 
 /** KEEP */
 @import 'keep/cmps/NotePreview.css';
 @import 'keep/cmps/NoteAdd.css';
-@import 'keep/Pages/NoteApp.css';
 
-@import 'parts/helpers.css';
 
 @import 'cmps/AppHome.css';
 @import 'cmps/AppFooter.css';
 @import 'cmps/AppHeader.css';
-@import 'cmps/UserMsg.css';
 
-/* main {
-  height: 75vh;
-} */
+@import 'parts/fonts.css';
+@import 'parts/base.css';
+@import 'parts/helpers.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');

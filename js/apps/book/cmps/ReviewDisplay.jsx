@@ -14,7 +14,7 @@ export class ReviewDisplay extends React.Component {
   };
   render() {
     const { book } = this.state;
-    if (!this.props.book.review) return <div> no reviews</div>;
+    if (!this.props.book.review) return <div></div>;
     return book.review.map((review, index) => {
       return (
         <div key={index}>
@@ -22,7 +22,7 @@ export class ReviewDisplay extends React.Component {
           <p>{review.date}</p>
           <p>{`${review.stars}/5`}</p>
           <p>{review.opinion}</p>
-          <button
+          <button className="btn"
             onClick={() =>
               this.onDelete(this.props.book.id, review.id)
             }
