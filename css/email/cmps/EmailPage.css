@@ -1,0 +1,19 @@
+.emails {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.email-showcase {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4rem;
+}
+
+.ctrls {
+  margin-right: 4rem;
+}
+
+.email-add {
+  display: flex;
+  flex-direction: column;
+}

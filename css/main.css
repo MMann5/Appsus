@@ -13,9 +13,9 @@
 @import 'book/cmps/ReviewDisplay.css';
 @import 'book/cmps/UserMsg.css';
 
-
 @import 'keep/cmps/NotePreview.css';
 @import 'keep/cmps/NoteAdd.css';
+@import 'email/cmps/EmailPage.css';
 
 @import 'parts/helpers.css';
 @import 'parts/fonts.css';
@@ -24,6 +24,3 @@
 @import 'cmps/app-home.css';
 @import 'cmps/app-header.css';
 @import 'cmps/user-msg.css';
-
-  
-  

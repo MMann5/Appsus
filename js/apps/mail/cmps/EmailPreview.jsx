@@ -1,14 +1,34 @@
 const { Link } = ReactRouterDOM;
 
-export function EmailPreview({ email }) {
+export function EmailPreview({
+  email,
+  openEmail,
+  onToggleStar,
+  onDeleteEmail,
+}) {
   return (
-    <article
-      className={`email-window ${email.isRead ? 'read' : ''}`}
-    >
-      <Link className='email-details' to={`/mail/${email.id}`}>
-        <h4 className='single-email-subject'>{email.subject}</h4>
-        <h4 className='single-email-body'>{email.body}</h4>
-      </Link>
-    </article>
+    <section className='email-showcase'>
+      <div
+        className={`email-window ${email.isRead ? 'read' : ''}`}
+        onClick={(ev) => {
+          openEmail(ev, email);
+        }}
+      >
+        <span className='email-subject'>{email.subject}</span>
+      </div>
+      <div className='ctrls'>
+        <input
+          type='checkbox'
+          className='email-starred'
+          onChange={(ev) => onToggleStar(ev, email.id)}
+        />
+        <button
+          className='email-del-btn'
+          onClick={() => onDeleteEmail(email.id)}
+        >
+          Delete
+        </button>
+      </div>
+    </section>
   );
 }

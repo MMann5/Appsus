@@ -8,13 +8,14 @@ import { AppHeader } from './js/cmps/AppHeader.jsx';
 import { UserMsg } from './js/cmps/UserMsg.jsx';
 const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;
+
 export function App() {
   return (
     <Router>
-      <header className="main-header">
+      <header className='main-header'>
         <AppHeader />
       </header>
-      <main className="main-content main-layout">
+      <main className='main-content main-layout'>
         <Switch>
           <Route path='/book/:bookId' component={BookDetails} />
           <Route path='/book' component={BookApp} />
