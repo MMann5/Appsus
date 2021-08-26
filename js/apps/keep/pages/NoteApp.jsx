@@ -35,9 +35,15 @@ export class NoteApp extends React.Component {
         })
     }
 
-    onUpdateNote(ev,id){
+    onUpdateNote = (ev,id) =>{
         const color = ev.target.value
         noteService.updateNote(color, id).then(() => {
+            this.loadNotes()
+        })
+    }
+
+    onTogglePin = (ev,id) =>{
+        noteService.togglePin(ev.target.checked, id).then(() => {
             this.loadNotes()
         })
     }
@@ -47,7 +53,8 @@ export class NoteApp extends React.Component {
         return (
             <section className="note-app">
                 <NoteAdd onAddNote={this.onAddNote} />
-                <NoteList notes={notes} onDeleteNote={this.onDeleteNote} onChangeColor={this.onChangeColor} onUpdateNote={this.onUpdateNote} />
+                <NoteList notes={notes} onDeleteNote={this.onDeleteNote} onChangeColor={this.onChangeColor} onUpdateNote={this.onUpdateNote} 
+                onTogglePin={this.onTogglePin} />
             </section>
         )
     }

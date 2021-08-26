@@ -1,4 +1,4 @@
-import {storageService} from '../../../services/storage.service.js'
+import { storageService } from '../../../services/storage.service.js'
 import { utilService } from '../../../services/util.service.js'
 
 export const noteService = {
@@ -6,7 +6,8 @@ export const noteService = {
     deleteNote,
     changeColor,
     addNote,
-    updateNote
+    updateNote,
+    togglePin
 }
 
 const KEY = 'NOTESDB'
@@ -14,7 +15,7 @@ const KEY = 'NOTESDB'
 var gNotes = [
     {
         id: utilService.makeId(),
-        isPinned: true,
+        isPinned: false,
         info: {
             txt: 'Today is Reactive Sprint !',
             url: null,
@@ -81,8 +82,12 @@ var gNotes = [
     }]
 
 function query() {
+    gNotes.some((note, idx) => {
+        note.isPinned && gNotes.unshift(gNotes.splice(idx, 1)[0])
+    })
     return Promise.resolve(gNotes)
 }
+
 
 function deleteNote(noteId) {
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
@@ -91,7 +96,7 @@ function deleteNote(noteId) {
     return Promise.resolve()
 }
 
-function addNote({txt,backgroundColor,url}) {
+function addNote({ txt, backgroundColor, url }) {
     var note = {
         id: utilService.makeId(),
         isPinned: false,
@@ -108,20 +113,27 @@ function addNote({txt,backgroundColor,url}) {
     return Promise.resolve()
 }
 
-function changeColor(color,noteId){
+function changeColor(color, noteId) {
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
     gNotes[noteIdx].style.backgroundColor = color
     _saveToStorage()
     return Promise.resolve()
 }
 
-function updateNote(txt,noteId){
+function updateNote(txt, noteId) {
     var noteIdx = gNotes.findIndex(note => noteId === note.id)
     gNotes[noteIdx].info.txt = txt
     _saveToStorage()
     return Promise.resolve()
 }
 
-function _saveToStorage(){
-    storageService.saveToStorage(KEY,gNotes)
+function togglePin(val, noteId) {
+    var noteIdx = gNotes.findIndex(note => noteId === note.id)
+    gNotes[noteIdx].isPinned = val
+    _saveToStorage()
+    return Promise.resolve()
+}
+
+function _saveToStorage() {
+    storageService.saveToStorage(KEY, gNotes)
 }

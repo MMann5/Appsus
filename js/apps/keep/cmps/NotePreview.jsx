@@ -1,4 +1,4 @@
-export function NotePreview({ note, onDeleteNote, onChangeColor, onUpdateNote }) {
+export function NotePreview({ note, onDeleteNote, onChangeColor, onUpdateNote,onTogglePin }) {
     return (
         <div className="note-preview" style={{ backgroundColor: note.style.backgroundColor }}>
             <textarea onChange={(ev) => {
@@ -8,7 +8,7 @@ export function NotePreview({ note, onDeleteNote, onChangeColor, onUpdateNote })
             <div className="note-btn">
                 <button className="delete" onClick={() => { onDeleteNote(note.id) }}>X</button>
                 <input type="color" className="color-preview" onChange={(ev) => { onChangeColor(ev, note.id) }} />
-                {/* <input type="checkbox" /> */}
+                <input type="checkbox" onChange={(ev) => { onTogglePin(ev, note.id) }} />
             </div>
         </div>
 
