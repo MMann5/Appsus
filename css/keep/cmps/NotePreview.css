@@ -56,3 +56,18 @@ h4.note.txt {
     border: none;
     background-color: transparent;
 }
+
+.duplicate{
+    width: 30px;
+    cursor: pointer;
+}
+
+.btn-duplicate{
+    background-color: transparent;
+    border: none;
+}
+
+input[type=color],input[type=checkbox]{
+    cursor: pointer;
+}
+

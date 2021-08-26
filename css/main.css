@@ -5,8 +5,6 @@
 @import 'book/cmps/BookList.css';
 @import 'book/cmps/UserMsg.css';
 
-@import 'keep/cmps/NotePreview.css';
-@import 'keep/cmps/NoteAdd.css';
 @import 'email/cmps/EmailPage.css';
 
 

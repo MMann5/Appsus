@@ -8,6 +8,7 @@ export const noteService = {
   addNote,
   updateNote,
   togglePin,
+  duplicate
 };
 
 const KEY = 'NOTESDB';
@@ -151,4 +152,13 @@ function togglePin(val, noteId) {
 
 function _saveToStorage() {
   storageService.saveToStorage(KEY, gNotes);
+}
+
+function duplicate(noteId) {
+  let noteIdx = gNotes.findIndex((note) => noteId === note.id);
+  let note = {...gNotes[noteIdx]}
+  note.id = utilService.makeId()
+  gNotes.push(note)
+  _saveToStorage();
+  return Promise.resolve();
 }
