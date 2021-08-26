@@ -36,7 +36,7 @@ export class MailApp extends React.Component {
   };
   loadSentEmails = () => {
     emailService
-      .querySentEmails()
+      .querySentEmails(this.state.filterBy)
       .then((sentEmails) => this.setState({ sentEmails }));
   };
 
@@ -62,6 +62,7 @@ export class MailApp extends React.Component {
             onToggleSentEmails={this.onToggleSentEmails}
             isSentEmail={false}
             getBack={this.getBack}
+            setFilterBy={this.setFilterBy}
           />
         );
       case PAGE_TYPES.READING_EMAIL:
@@ -94,6 +95,7 @@ export class MailApp extends React.Component {
             onDeleteEmail={this.onDeleteSentEmail}
             isSentEmail={true}
             getBack={this.getBack}
+            setFilterBy={this.setFilterBy}
           />
         );
     }
@@ -150,6 +152,15 @@ export class MailApp extends React.Component {
       this.getMainPageView
     );
   };
+  setFilterBy = (filterBy, isSentEmail) => {
+    console.log(filterBy, isSentEmail);
+    console.log(isSentEmail);
+    var callback = isSentEmail
+      ? this.loadSentEmails
+      : this.loadEmails;
+    this.setState({ filterBy: filterBy }, callback);
+  };
+
   render() {
     const mainPageView = this.getMainPageView();
     return (

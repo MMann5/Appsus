@@ -92,11 +92,11 @@ function query(filterBy) {
   if (filterBy) {
     const { searchQuery, type } = filterBy;
     const emailsToShow = gEmails.filter((email) =>
-      email.subject.includes(searchQuery) && type !== 'all'
-        ? type === 'read'
-          ? email.isRead
-          : !email.isRead
-        : email
+      email.subject.includes(searchQuery) && type === 'all'
+        ? email
+        : type === 'read'
+        ? email.isRead
+        : !email.isRead
     );
     return Promise.resolve(emailsToShow);
   } else {

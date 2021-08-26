@@ -1,5 +1,5 @@
 import { EmailPreview } from './EmailPreview.jsx';
-
+import { EmailFilter } from './EmailFilter.jsx';
 export function EmailPage({
   emails,
   openEmail,
@@ -9,9 +9,14 @@ export function EmailPage({
   isSentEmail,
   onToggleSentEmails,
   getBack,
+  setFilterBy,
 }) {
   return (
     <section>
+      <EmailFilter
+        setFilterBy={setFilterBy}
+        isSentEmail={isSentEmail}
+      />
       {!isSentEmail ? (
         <div>
           <button onClick={onToggleCompose}>
