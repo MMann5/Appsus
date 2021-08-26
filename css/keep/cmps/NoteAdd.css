@@ -1,3 +1,58 @@
-.filter-txt{
+.note-input {
+    font-size: large;
     resize: none;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: 6px  2px 15px rgba(165, 165, 165, 0.8);
+
+}
+
+.note-add {
+    border-radius: 10px;
+
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    /* border: solid black 1px; */
+    box-shadow: 6px 7px 2px 0px rgba(165, 165, 165, 0.8);
+}
+
+.new-note-btn {
+    margin: auto;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(85, 81, 80);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+  .new-note-btn:hover {
+    background-color: black;
+    color: orangered;
+  }
+
+.note-options{
+    margin: 0;
+    display: flex;
+}
+
+.img-icon{
+    cursor: pointer;
+    width: 30px;
+    margin-inline-start: 1%;
+}
+
+.color-pal{
+    width: 30px;
+}
+
+.url-note{
+    margin: 1%;
+    width: auto;
+    height: 30px;
+    border-radius: 15px;
 }

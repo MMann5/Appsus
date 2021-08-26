@@ -28,10 +28,6 @@ export class BookApp extends React.Component {
     const newBook = bookService.getFormmatedBook(book);
     this.setState({ books: [...this.state.books, newBook] });
     bookService.addToGbooks(newBook);
-    eventBusService.emit('user-msg', {
-      txt: 'book added!',
-      type: 'success',
-    });
   };
 
   render() {

@@ -20,13 +20,10 @@
     display: flex;
   }
 
-/* .main-layout {
-  width: 980px;
-  margin: 0 auto;
-} */
-
-
 .main-header .header-container {
   color: white;
 }
 
+a.nav-bar{
+  font-size: 1.5rem;
+}

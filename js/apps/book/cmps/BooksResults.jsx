@@ -10,8 +10,7 @@ export function BooksResults({ res, onAddBook, resetQuery }) {
               onAddBook(e, r);
               resetQuery();
             }}
-          >
-            <img className='add-icon'src="../js/apps/book/assets/img/add.png" alt="" />
+          >+
           </button>
         </div>
       ))}

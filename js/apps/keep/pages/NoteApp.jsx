@@ -46,10 +46,8 @@ export class NoteApp extends React.Component {
         const { notes } = this.state;
         return (
             <section className="note-app">
-                <h1>list</h1>
                 <NoteAdd onAddNote={this.onAddNote} />
                 <NoteList notes={notes} onDeleteNote={this.onDeleteNote} onChangeColor={this.onChangeColor} onUpdateNote={this.onUpdateNote} />
-
             </section>
         )
     }

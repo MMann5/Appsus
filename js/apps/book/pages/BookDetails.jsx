@@ -42,10 +42,6 @@ export class BookDetails extends React.Component {
 
   onDeleteBook = () => {
     bookService.deleteBook(this.state.book.id).then(this.onBack);
-    eventBusService.emit('user-msg', {
-      txt: 'book deleted!',
-      type: 'danger',
-    });
   };
   componentWillUnmount() {
     this.setState = (state, callback) => {

@@ -1,4 +1,3 @@
-import { NotePic } from "./NotePic.jsx";
 export class NoteAdd extends React.Component {
     state = {
         note: {
@@ -6,7 +5,7 @@ export class NoteAdd extends React.Component {
             url: null,
             backgroundColor: 'white',
         },
-        isChecked : false
+        isChecked: false
     };
 
     handleChange = (ev) => {
@@ -26,28 +25,34 @@ export class NoteAdd extends React.Component {
         this.setState({ note: { txt: '', url: null, backgroundColor: 'white' } })
     };
 
-    onCheck = (ev) =>{
-        this.setState({ isChecked :ev.target.checked});
+    onCheck = (ev) => {
+        this.setState({ isChecked: ev.target.checked });
     }
 
     render() {
-        const { txt, backgroundColor,isChecked} = this.state
+        const { txt, backgroundColor, isChecked } = this.state
         return (
-            <div>
+            <div className="form">
                 <form className='note-add' onSubmit={this.onSave}>
                     <label htmlFor='by-title'></label>
                     <textarea value={txt}
-                        className='filter filter-txt'
+                        className='note-input'
                         name='txt'
                         type='text'
-                        placeholder='your mind'
-                        rows="15" cols="33"
-                        onChange={this.handleChange}></textarea>
-                    <input value={backgroundColor} className='filter' name='backgroundColor' type='color' onChange={this.handleChange} />
-                    <label htmlFor="img-url">Insert Pic</label>
-                    <input type="checkbox" onChange={this.onCheck} id="img-url"/>
-                    { isChecked && <NotePic url={this.state.note.url} backgroundColor={this.state.note.backgroundColor} onChange={this.handleChange} />}
-                    <button>New</button>
+                        placeholder='new note..'
+                        rows="5" cols="33"
+                        onChange={this.handleChange}>
+                    </textarea>
+                    <div className="note-options">
+                        <label htmlFor="color-pal"><img className="color-pal"src="https://img.icons8.com/ios/50/000000/fill-color.png"/></label>
+                        <input value={backgroundColor} id="color-pal" className='note-color' name='backgroundColor' type='color' onChange={this.handleChange} hidden />
+                        <button className="new-note-btn">New</button>
+                        <label htmlFor="img-url"><img className="img-icon" src="https://img.icons8.com/ios/50/000000/image.png" /></label>
+                        <input type="checkbox" onChange={this.onCheck} id="img-url" hidden />
+                        {isChecked && <div>
+                            <input value={this.state.note.url} accept="video/mp4,video/x-m4v,video/*" type="url" name="url" onChange={this.handleChange} placeholder="URL" className="url-note" />
+                        </div>}
+                    </div>
                 </form>
             </div>
         );
