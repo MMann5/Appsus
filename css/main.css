@@ -22,8 +22,6 @@
 /** KEEP */
 @import 'keep/cmps/NotePreview.css';
 @import 'keep/cmps/NoteAdd.css';
-@import 'keep/cmps/NoteList.css';
-@import 'keep/cmps/NotePic.css';
 @import 'keep/Pages/NoteApp.css';
 
 @import 'parts/helpers.css';
