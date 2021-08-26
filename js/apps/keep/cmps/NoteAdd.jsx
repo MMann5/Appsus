@@ -3,7 +3,7 @@ export class NoteAdd extends React.Component {
         note: {
             txt: '',
             url: null,
-            backgroundColor: 'white',
+            backgroundColor: '#3DC4CD',
         },
         isChecked: false
     };

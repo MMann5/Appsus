@@ -100,7 +100,7 @@ function deleteNote(noteId) {
   return Promise.resolve();
 }
 
-function addNote({ txt, backgroundColor, url }) {
+function addNote({ txt, url, backgroundColor }) {
   var note = {
     id: utilService.makeId(),
     isPinned: false,

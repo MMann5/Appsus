@@ -28,3 +28,10 @@ h2 {
 h2 {
     font-size: 1.75rem;
 }
+
+.app-home{
+    height: 100vh;
+    background-image: url(/img/3810369.jpg);
+    background-size: cover;
+
+}
