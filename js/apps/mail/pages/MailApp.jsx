@@ -8,6 +8,8 @@ const PAGE_TYPES = {
   EMAILS: 'emails',
   READING_EMAIL: 'reading_email',
   COMPSING_EMAIL: 'compsing_email',
+  SENT_EMAILS: 'sent_emails',
+  READING_SENT_EMAIL: 'reading_sent_email',
 };
 
 export class MailApp extends React.Component {
@@ -41,6 +43,9 @@ export class MailApp extends React.Component {
   getBack = () => {
     this.setState({ currentPage: PAGE_TYPES.EMAILS });
   };
+  getBackSent = () => {
+    this.setState({ currentPage: PAGE_TYPES.SENT_EMAILS });
+  };
 
   getMainPageView = () => {
     const { currentPage } = this.state;
@@ -54,6 +59,9 @@ export class MailApp extends React.Component {
             onToggleStar={this.onToggleStar}
             onDeleteEmail={this.onDeleteEmail}
             onToggleCompose={this.onToggleCompose}
+            onToggleSentEmails={this.onToggleSentEmails}
+            isSentEmail={false}
+            getBack={this.getBack}
           />
         );
       case PAGE_TYPES.READING_EMAIL:
@@ -63,10 +71,28 @@ export class MailApp extends React.Component {
             getBack={this.getBack}
           />
         );
+      case PAGE_TYPES.READING_SENT_EMAIL:
+        return (
+          <EmailDetail
+            email={this.state.openedEmail}
+            getBack={this.getBackSent}
+          />
+        );
       case PAGE_TYPES.COMPSING_EMAIL:
         return (
           <EmailCompose
             onStoreSentEmail={this.onStoreSentEmail}
+            getBack={this.getBack}
+          />
+        );
+      case PAGE_TYPES.SENT_EMAILS:
+        return (
+          <EmailPage
+            emails={this.state.sentEmails}
+            openEmail={this.openSentEmail}
+            onToggleStar={this.onToggleStar}
+            onDeleteEmail={this.onDeleteSentEmail}
+            isSentEmail={true}
             getBack={this.getBack}
           />
         );
@@ -82,6 +108,15 @@ export class MailApp extends React.Component {
       this.getMainPageView
     );
   };
+  openSentEmail = (ev, openedEmail) => {
+    this.setState(
+      {
+        openedEmail,
+        currentPage: PAGE_TYPES.READING_SENT_EMAIL,
+      },
+      this.getMainPageView
+    );
+  };
 
   onToggleStar = (ev, id) => {
     emailService.toggleStar(ev.target.checked, id).then(() => {
@@ -91,6 +126,11 @@ export class MailApp extends React.Component {
   onDeleteEmail = (id) => {
     emailService.deleteEmail(id).then(() => {
       this.loadEmails();
+    });
+  };
+  onDeleteSentEmail = (id) => {
+    emailService.deleteSentEmail(id).then(() => {
+      this.loadSentEmails();
     });
   };
   onStoreSentEmail = (email) => {
@@ -104,8 +144,13 @@ export class MailApp extends React.Component {
       this.getMainPageView
     );
   };
+  onToggleSentEmails = () => {
+    this.setState(
+      { currentPage: PAGE_TYPES.SENT_EMAILS },
+      this.getMainPageView
+    );
+  };
   render() {
-    const { currentPage } = this.state;
     const mainPageView = this.getMainPageView();
     return (
       <section>

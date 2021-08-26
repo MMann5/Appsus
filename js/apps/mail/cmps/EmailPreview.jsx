@@ -1,4 +1,3 @@
-const { Link } = ReactRouterDOM;
 
 export function EmailPreview({
   email,
@@ -14,7 +13,11 @@ export function EmailPreview({
           openEmail(ev, email);
         }}
       >
-        <span className='email-subject'>{email.subject}</span>
+        <span className='email-subject'>
+          {email.subject}
+          {'  '}
+          {email.body}
+        </span>
       </div>
       <div className='ctrls'>
         <input

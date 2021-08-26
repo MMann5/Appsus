@@ -5,6 +5,7 @@ export const emailService = {
   deleteEmail,
   querySentEmails,
   addSentEmail,
+  deleteSentEmail,
 };
 
 var mockEmails = [
@@ -127,5 +128,12 @@ function toggleStar(val, emailId) {
 function deleteEmail(emailId) {
   var emailIdx = gEmails.findIndex((email) => emailId === email.id);
   gEmails.splice(emailIdx, 1);
+  return Promise.resolve();
+}
+function deleteSentEmail(emailId) {
+  var emailIdx = gSentEmails.findIndex(
+    (email) => emailId === email.id
+  );
+  gSentEmails.splice(emailIdx, 1);
   return Promise.resolve();
 }

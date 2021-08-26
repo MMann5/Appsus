@@ -27,7 +27,7 @@ export class EmailCompose extends React.Component {
   render() {
     const { to, subject, body } = this.state;
     return (
-      <div>
+      <div className='compose-mail'>
         <form className='email-add' onSubmit={this.onSave}>
           <label htmlFor='by-title'></label>
           <textarea
@@ -35,9 +35,9 @@ export class EmailCompose extends React.Component {
             className='compose compose-txt'
             name='to'
             type='email'
-            placeholder='Recipient'
-            rows='15'
-            cols='20'
+            placeholder='mailto@gmail.com'
+            rows='2'
+            cols='60'
             onChange={this.handleChange}
           ></textarea>
           <textarea
@@ -45,9 +45,9 @@ export class EmailCompose extends React.Component {
             className='compose compose-txt'
             name='subject'
             type='text'
-            placeholder='Subjectio'
-            rows='15'
-            cols='20'
+            placeholder='Subject'
+            rows='2'
+            cols='60'
             onChange={this.handleChange}
           ></textarea>
           <textarea
@@ -55,12 +55,12 @@ export class EmailCompose extends React.Component {
             className='compose compose-txt'
             name='body'
             type='text'
-            placeholder='Write Whatever'
-            rows='15'
-            cols='20'
+            placeholder='mail...'
+            rows='8'
+            cols='60'
             onChange={this.handleChange}
           ></textarea>
-          <button>SEND</button>
+          <button className='send-btn'>SEND</button>
         </form>
       </div>
     );
