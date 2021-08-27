@@ -32,3 +32,15 @@ a.nav-bar:last-child {
   font-size: 3rem;
   color:#50a5eb;
 }
+
+@media(max-width:585px){
+  .app-header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  a.nav-bar:last-child {
+    padding-inline-end: 0px;
+  }
+}

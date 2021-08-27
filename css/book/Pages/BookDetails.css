@@ -1,6 +1,11 @@
-.more {
-  color: orangered;
+a.more {
+  color: rgb(1, 1, 133);
+  font-weight: bold;
   cursor: pointer;
+}
+
+#opinion{
+  resize: none;
 }
 
 .book-details {
@@ -28,4 +33,10 @@ form.book-edit {
 .prev-next:hover {
   font-weight: bold;
   background-color: orangered;
+}
+
+@media (max-width: 585px){
+  form.book-edit {
+    width: 50%;
+  }
 }

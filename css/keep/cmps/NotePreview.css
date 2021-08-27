@@ -2,12 +2,16 @@
     width: 100%;
 }
 
+.note-list {
+    margin: auto;
+    text-align: center;
+}
+
 .filter-txt {
     border-radius: 20px;
     text-align: center;
     resize: none;
     border: none;
-    /* font-size: large; */
     margin: auto;
 }
 
@@ -17,19 +21,21 @@
 
 .note-preview {
     display: inline-block;
-    /* border: solid black 1px; */
     border-radius: 40px;
     box-shadow: 6px 7px 2px 0px rgba(165, 165, 165, 0.8);
     width: 300px;
-    /* height: 500px; */
     margin: 5px;
     padding: 10px;
-    /* cursor: pointer; */
 }
 
-div.note-preview:hover{
+div.note-preview:hover {
     transition: 0.5s;
-    background-color: white!important;
+    background-color: white !important;
+}
+
+textarea.filter-txt:hover {
+    transition: 0.5s;
+    background-color: white !important;
 }
 
 h4.note.txt {
@@ -41,33 +47,42 @@ h4.note.txt {
     justify-content: center;
 }
 
-.delete {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.delete:hover{
-    background-color: rgba(0, 0, 0, 0.753);
-    color: white;
-}
-
-.color-preview{
+.color-preview {
     width: 20px;
     border: none;
     background-color: transparent;
 }
 
-.duplicate{
+.duplicate {
     width: 30px;
     cursor: pointer;
 }
 
-.btn-duplicate{
+.btn-duplicate {
     background-color: transparent;
     border: none;
 }
 
-input[type=color],input[type=checkbox]{
+input[type=color],
+input[type=checkbox] {
     cursor: pointer;
 }
 
+.fa.fa-files-o,
+.fa.fa-trash {
+    background-color: transparent;
+    width: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-thumb-tack {
+    border: none;
+    background: transparent;
+}
+
+@media (max-width:585px) {
+    .note-preview {  
+        width: 80%;
+    }
+}

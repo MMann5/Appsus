@@ -1,5 +1,4 @@
 .result-all {
-  border: solid black 10px;
   display: flex;
   flex-direction: column;
 
@@ -10,7 +9,7 @@
   flex-direction: row;
   height: 50px;
   justify-content: space-between;
-  width: 30%;
+  width: 80%;
   margin: auto;
   list-style-type: none;
   margin-top: 1%;

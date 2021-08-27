@@ -17,21 +17,6 @@
   box-shadow: 6px 7px 2px 0px rgba(165, 165, 165, 0.8);
 }
 
-.new-note-btn {
-  margin: auto;
-  width: 150px;
-  height: 30px;
-  background-color: rgb(85, 81, 80);
-  color: white;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-.new-note-btn:hover {
-  background-color: black;
-  color: orangered;
-}
-
 .note-options {
   align-items: center;
   justify-content: space-around;
@@ -61,4 +46,18 @@
 div.form {
   margin-top: 3%;
   margin-bottom: 3%;
+}
+
+
+@media (max-width:900px){
+  .note-add {
+    width: 50%;
+  }
+}
+
+
+@media (max-width:585px){
+  .note-add {
+    width: 95%;
+  }
 }

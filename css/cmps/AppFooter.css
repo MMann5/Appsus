@@ -1,6 +1,6 @@
 .app-footer {
     height: 100px;
-    background: linear-gradient(to right, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #abbaab, #ffffff);
     color: rgb(39, 145, 180);
     display: flex;
     justify-content: space-between;

@@ -8,6 +8,7 @@ export function EmailPreview({
   return (
     <section className='email-showcase'>
       <table className="table-mail">
+        <tbody>
         <tr>
           <div
             className={`email-window ${email.isRead ? 'read' : ''}`}
@@ -20,8 +21,9 @@ export function EmailPreview({
           </div>
 
           <td className="star obj"><input type='checkbox' className='email-starred' onChange={(ev) => onToggleStar(ev, email.id)} /></td>
-          <td className="obj"><button className='btn' onClick={() => onDeleteEmail(email.id)}>Delete</button></td>
+          <td className="obj"><button className="fa fa-trash fa-2x" onClick={() => onDeleteEmail(email.id)}></button></td>
         </tr>
+        </tbody>
       </table>
     </section>
   );

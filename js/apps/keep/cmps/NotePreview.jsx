@@ -6,10 +6,10 @@ export function NotePreview({ note, onDeleteNote, onChangeColor, onUpdateNote, o
             }} className="filter-txt" id="" cols="30" rows="4" style={{ backgroundColor: note.style.backgroundColor }}>{note.info.txt}</textarea>
             <img className='img-preview' src={note.info.url} />
             <div className="note-btn">
-                <button className="btn btn-delete" onClick={() => { onDeleteNote(note.id) }}>X</button>
+                <button className="fa fa-trash" aria-hidden="true" onClick={() => { onDeleteNote(note.id) }}></button>
                 <input type="color" className="color-preview" onChange={(ev) => { onChangeColor(ev, note.id) }} />
-                <input type="checkbox" onChange={(ev) => { onTogglePin(ev, note.id) }} />
-                <button className="btn-duplicate" onClick={() => onDuplicate(note.id)}><img className="duplicate" src="img/duplicate.png" alt="" /></button>
+                <input type="checkbox" onChange={(ev) => { onTogglePin(ev, note.id) }}/>
+                <button className="fa fa-files-o" onClick={() => onDuplicate(note.id)}></button>
             </div>
         </div>
     )
