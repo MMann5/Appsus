@@ -1,6 +1,6 @@
 .email-showcase {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   margin-left: 4rem;
   margin: auto;
   width: 90%;
@@ -8,6 +8,11 @@
 
 .ctrls {
   margin-right: 4rem;
+}
+
+.emails{
+  text-align: center;
+  margin: auto;
 }
 
 .email-add {
@@ -41,26 +46,29 @@
 
 .table-mail {
   width: 100%;
+  line-height: 50px;
+}
+
+.table-mail tr{
   text-align: center;
+  margin: auto;
+}
+
+.email-window{
+  margin: auto;
+  display: inline-block;
+}
+.obj{
+  font-weight: bolder;
+}
+.mailto{
+  font-weight: bolder;
 }
 
 .table-mail:hover {
   background-color: rgba(0, 153, 255, 0.432);
   cursor: pointer;
   font-weight: bold;
-}
-
-.obj {
-  width: 10%;
-  font-weight: bolder;
-}
-
-.body {
-  width: 60%;
-}
-
-.star {
-  text-align: end;
 }
 
 .mail-btn {
