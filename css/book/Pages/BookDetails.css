@@ -32,7 +32,7 @@ form.book-edit {
 
 .prev-next:hover {
   font-weight: bold;
-  background-color: orangered;
+  background-color: rgba(0, 0, 0, 0.555);
 }
 
 @media (max-width: 585px){

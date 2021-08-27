@@ -41,23 +41,22 @@ var gNotes = [
     id: utilService.makeId(),
     isPinned: false,
     info: {
-      url:
-        'https://i.picsum.photos/id/1002/4312/2868.jpg?hmac=5LlLE-NY9oMnmIQp7ms6IfdvSUQOzP_O3DPMWmyNxwo',
-      txt: 'Good memories...',
+      txt: 'SPRIIIIIIINT !',
+      url: null,
     },
     style: {
-      backgroundColor: '#3DC4CD',
+      backgroundColor: '#3DCD83',
     },
   },
   {
     id: utilService.makeId(),
     isPinned: false,
     info: {
-      txt: 'SPRIIIIIIINT !',
+      txt: 'I am Tied',
       url: null,
     },
     style: {
-      backgroundColor: '#3DCD83',
+      backgroundColor: '#CD3DeD',
     },
   },
   {
@@ -70,18 +69,6 @@ var gNotes = [
     },
     style: {
       backgroundColor: '#CDC43D',
-    },
-  },
-  {
-    id: utilService.makeId(),
-    isPinned: false,
-    info: {
-      url:
-        'https://i.picsum.photos/id/1023/3955/2094.jpg?hmac=AW_7mARdoPWuI7sr6SG8t-2fScyyewuNscwMWtQRawU',
-      txt: 'So Nature..',
-    },
-    style: {
-      backgroundColor: '#C63DCD',
     },
   },
   {
@@ -156,7 +143,7 @@ function _saveToStorage() {
 
 function duplicate(noteId) {
   let noteIdx = gNotes.findIndex((note) => noteId === note.id);
-  let note = {...gNotes[noteIdx]}
+  let note = { ...gNotes[noteIdx] }
   note.id = utilService.makeId()
   gNotes.push(note)
   _saveToStorage();

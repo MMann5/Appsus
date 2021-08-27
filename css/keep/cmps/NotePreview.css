@@ -1,9 +1,12 @@
 .img-preview {
     width: 100%;
+    border-radius: 20px;
 }
 
 .note-list {
     margin: auto;
+    margin-inline-end: 10%;
+    margin-inline-start: 10%;
     text-align: center;
 }
 
@@ -21,30 +24,38 @@
 
 .note-preview {
     display: inline-block;
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 6px 7px 2px 0px rgba(165, 165, 165, 0.8);
     width: 300px;
     margin: 5px;
     padding: 10px;
 }
 
-div.note-preview:hover {
+.note-preview:hover {
     transition: 0.5s;
     background-color: white !important;
 }
 
-textarea.filter-txt:hover {
+.note-btn {
+    display: none;
+}
+
+.note-preview textarea{
+    font-size: large;
+}
+
+.note-preview:hover .note-btn{
+    justify-content: center;
+    display: flex;
+}
+
+.note-preview:hover textarea.filter-txt {
     transition: 0.5s;
     background-color: white !important;
 }
 
 h4.note.txt {
     margin: 0;
-}
-
-.note-btn {
-    display: flex;
-    justify-content: center;
 }
 
 .color-preview {
@@ -84,5 +95,12 @@ input[type=checkbox] {
 @media (max-width:585px) {
     .note-preview {  
         width: 80%;
+    }
+
+    .note-list {
+        margin: auto;
+        margin-inline-end: 1%;
+        margin-inline-start: 1%;
+        text-align: center;
     }
 }

@@ -18,6 +18,7 @@ a {
 
 .active {
     color: white;
+    font-weight: bold;
 }
 
 h1,
@@ -27,16 +28,22 @@ h2 {
     line-height: 1.875rem;
 }
 
+.app-header h1{
+    cursor: pointer;
+} 
+
 h2 {
     font-size: 1.75rem;
+    margin: 0 0;
 }
 
 .app-home {
     height: 100vh;
-    background-image: url(/img/pexels-a-tiny-&-big-man-737586.jpg);
+    background-image: url(/img/pexels-kenneth-carpina-2468773.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    opacity: 0.9;
 
 }
 
@@ -79,7 +86,6 @@ input[type=number] {
     color: #444;
     font-size: 16px;
     padding: 12px 15px;
-    /* width: 100%; */
     border-radius: 3px;
 }
 
