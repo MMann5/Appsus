@@ -37,7 +37,7 @@ export class EmailCompose extends React.Component {
             type='email'
             placeholder='mailto@gmail.com'
             rows='2'
-            cols='60'
+            cols='40'
             onChange={this.handleChange}
           ></textarea>
           <textarea
@@ -47,7 +47,7 @@ export class EmailCompose extends React.Component {
             type='text'
             placeholder='Subject'
             rows='2'
-            cols='60'
+            cols='40'
             onChange={this.handleChange}
           ></textarea>
           <textarea
@@ -57,7 +57,7 @@ export class EmailCompose extends React.Component {
             type='text'
             placeholder='mail...'
             rows='8'
-            cols='60'
+            cols='40'
             onChange={this.handleChange}
           ></textarea>
           <button className="btn">SEND</button>

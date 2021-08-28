@@ -39,7 +39,7 @@ h2 {
 
 .app-home {
     height: 100vh;
-    background-image: url(/img/pexels-kenneth-carpina-2468773.jpg);
+    background-image: url(../../img/pexels-kenneth-carpina-2468773.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

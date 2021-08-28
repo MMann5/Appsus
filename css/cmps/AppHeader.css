@@ -43,4 +43,8 @@ a.nav-bar:last-child {
   a.nav-bar:last-child {
     padding-inline-end: 0px;
   }
+
+  .app-header h1{
+    padding-inline-start: 0px;
+  }
 }
