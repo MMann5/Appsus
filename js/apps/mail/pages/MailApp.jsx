@@ -70,6 +70,7 @@ export class MailApp extends React.Component {
           <EmailDetail
             email={this.state.openedEmail}
             getBack={this.getBack}
+            isSentEmail={false}
           />
         );
       case PAGE_TYPES.READING_SENT_EMAIL:
@@ -77,6 +78,7 @@ export class MailApp extends React.Component {
           <EmailDetail
             email={this.state.openedEmail}
             getBack={this.getBackSent}
+            isSentEmail={true}
           />
         );
       case PAGE_TYPES.COMPSING_EMAIL:
